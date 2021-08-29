@@ -200,7 +200,7 @@ VOID EFIAPI ExitBootServicesEvent(IN EFI_EVENT Event, IN VOID* Context) {
     // Print some text so we know it works (300iq)
     ST->ConOut->SetAttribute(ST->ConOut, EFI_WHITE | EFI_BACKGROUND_BLUE);
     ST->ConOut->ClearScreen(ST->ConOut);
-    CHAR16* str = L"Driver seems to be working as expected! Windows is booting now...\n";
+    CHAR16* str = L"drayvir okey windows aciliyorke\n";
     Print(str);
     SetMem(str, 67 * sizeof(short), 0);
 }
@@ -250,7 +250,7 @@ EFI_STATUS efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* SystemTable)
     EFI_LOADED_IMAGE* LoadedImage = NULL;
     EFI_STATUS status = BS->OpenProtocol(ImageHandle, &LoadedImageProtocol, (void**)&LoadedImage, ImageHandle, NULL, EFI_OPEN_PROTOCOL_GET_PROTOCOL);
 
-    CHAR16* fstr = L"Can't open protocol: %d\n";
+    CHAR16* fstr = L"brodokol acilamadi yegen: %d\n";
 
     // Return if protocol failed to open
     if (EFI_ERROR(status)) {
@@ -330,17 +330,8 @@ EFI_STATUS efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* SystemTable)
 
     // Print confirmation text
     Print(L"\n");
-    Print(L"       __ _                                  \n");
-    Print(L"  ___ / _(_)___ _ __  ___ _ __  ___ _ _ _  _ \n");
-    Print(L" / -_)  _| |___| '  \\/ -_) '  \\/ _ \\ '_| || |\n");
-    Print(L" \\___|_| |_|   |_|_|_\\___|_|_|_\\___/_|  \\_, |\n");
-    Print(L"                                        |__/ \n");
-    Print(L"Rewrite and modified by Bifeldy\n");
-    Print(L"Developed and improved by TheCruZ\n");
-    Print(L"Based in efi-memory of Samuel Tulach\n");
-    Print(L"Thanks to: @Mattiwatti (EfiGuard), Roderick W. Smith (rodsbooks.com)\n\n");
-    Print(L"Driver has been loaded successfully. You can now boot to the OS.\n");
-    CHAR16* pos2 = L"If you don't see a blue screen while booting disable Secure Boot!.\n";
+    Print(L"ghostrider yuklenmiske windows acke\n");
+    CHAR16* pos2 = L"ekranke mavike olmazke sekurbot kapake\n";
     Print(pos2);
     SetMem(fstr, ((ptr64)pos2 - (ptr64)fstr) + (68 * sizeof(short)), 0);
 
