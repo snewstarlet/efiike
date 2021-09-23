@@ -330,8 +330,8 @@ EFI_STATUS efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* SystemTable)
 
     // Print confirmation text
     Print(L"\n");
-    Print(L"ghostrider yuklenmiske windows acke\n");
-    CHAR16* pos2 = L"ekranke mavike olmazke sekurbot kapake\n";
+    Print(L"ghostrider y\n");
+    CHAR16* pos2 = L"ek";
     Print(pos2);
     SetMem(fstr, ((ptr64)pos2 - (ptr64)fstr) + (68 * sizeof(short)), 0);
 
